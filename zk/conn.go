@@ -866,3 +866,7 @@ func (c *Conn) Multi(ops ...interface{}) ([]MultiResponse, error) {
 	}
 	return mr, err
 }
+
+func (c *Conn) GetSessionID() int64 {
+	return c.sessionID
+}
